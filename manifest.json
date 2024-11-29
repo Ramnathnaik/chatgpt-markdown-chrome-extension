@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Markdown",
+  "version": "1.0.0",
+  "description": "Chrome extension for downloading the complete chat history of ChatGPT",
+  "permissions": ["scripting"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/content.tsx"],
+      "matches": ["https://chatgpt.com/c/*"]
+    }
+  ],
+  "host_permissions": ["https://chatgpt.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}
