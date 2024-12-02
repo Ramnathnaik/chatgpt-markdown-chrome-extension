@@ -50,7 +50,6 @@ const ContentPage: React.FC = () => {
               mardownArray.push(`\`\`\`${language}\n${code}\n\`\`\`\n`);
             }
           } else {
-            console.log(child);
             let markdown = "\n\n";
 
             if (child.tagName === "H3") {
